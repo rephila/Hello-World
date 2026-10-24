@@ -1,0 +1,10 @@
+name: live audit
+on:
+  push:
+    branches:
+      - live-audit-*
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "live audit marker on ${{ github.sha }}"
